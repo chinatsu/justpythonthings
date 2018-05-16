@@ -6,7 +6,8 @@ def fizzbuzz(start, end):
             dict(
                 # fizz
                 {str(x): getattr("", "join")(
-                    getattr("{2}{1}{0}{0}", "format")(
+                    getattr("{3}{2}{1}{1}", "format")(
+                        getattr(__import__('random'), 'seed')("wrong"),
                         chr(122),
                         getattr(__import__('random'), "choice")(
                             getattr("a e i o u", "split")()),
@@ -16,7 +17,8 @@ def fizzbuzz(start, end):
                 # will get expanded to essentially dict(fizz, str(5)="Buzz", str(10)="Buzz", ...), (except you can't normally have expressions as keyword)
                 # and at some point down the line, we'd have 15="Buzz" and 15="FizzBuzz" in the same list of kwargs.
                 **{str(x): getattr("", "join")(
-                    getattr("{2}{1}{0}{0}", "format")(
+                    getattr("{3}{2}{1}{1}", "format")(
+                        getattr(__import__('random'), 'seed')("🤷🏻‍"),
                         chr(122),
                         getattr(__import__('random'), "choice")(
                             getattr("a e i o u", "split")()),
@@ -24,7 +26,8 @@ def fizzbuzz(start, end):
                             getattr("b c d f g h j k l m n p q r s t v x y z", "split")()), "upper")())) for x in range(start, end+1) if x % 5 == 0 and x % 3 != 0},
                 # fizzbuzz
                 **{str(x): getattr("", "join")(
-                    getattr("{2}{1}{0}{0}{3}{4}{0}{0}", "format")(
+                    getattr("{3}{2}{1}{1}{4}{5}{1}{1}", "format")(
+                        getattr(__import__('random'), 'seed')("destructibility"),
                         chr(122),
                         getattr(__import__('random'), "choice")(
                             getattr("a e i o u", "split")()),
