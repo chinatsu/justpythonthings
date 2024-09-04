@@ -14,6 +14,37 @@ getattr(
         + chr(95)
     ]  # __setitem__
 )(
+    *[chr(97)] # a
+    + [
+        getattr(
+            *[globals()]
+            + [
+                chr(95)
+                + chr(95)
+                + chr(115)
+                + chr(101)
+                + chr(116)
+                + chr(105)
+                + chr(116)
+                + chr(101)
+                + chr(109)
+                + chr(95)
+                + chr(95)
+            ]  # __setitem__
+        )
+    ]
+)
+
+a(
+    *[chr(98)] # b
+    + [
+        lambda l: getattr(*[str()] + [chr(106) + chr(111) + chr(105) + chr(110)])(
+            chr(c) for c in l
+        )
+    ]
+)
+
+a(
     *[chr(102)]  # f
     + [
         lambda x: getattr(
@@ -21,17 +52,11 @@ getattr(
                 getattr(
                     *[bytes]
                     + [
-                        chr(102)
-                        + chr(114)
-                        + chr(111)
-                        + chr(109)
-                        + chr(104)
-                        + chr(101)
-                        + chr(120)
+                        b([102] + [114] + [111] + [109] + [104] + [101] + [120])
                     ]  # fromhex
                 )(hex(x)[2:])
             ]
-            + [chr(100) + chr(101) + chr(99) + chr(111) + chr(100) + chr(101)]  # decode
+            + [b([100] + [101] + [99] + [111] + [100] + [101])]  # decode
         )()
     ]
 )
