@@ -1,3 +1,5 @@
+import datetime
+
 getattr(
     *[globals()]
     + [
@@ -66,7 +68,7 @@ print(f(0x48656C6C6F20776F726C6421))  # Hello world!
 print(
     getattr(
         *[
-            getattr(*[__import__(f(0x6461746574696D65))] + [f(0x6461746574696D65)])
+            getattr(*[datetime] + [f(0x6461746574696D65)])
         ]  # datetime
         + [f(0x6E6F77)]  # now
     )()
